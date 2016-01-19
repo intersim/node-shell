@@ -1,20 +1,19 @@
-//console.log(Object.keys(process));
+var commands = require('./commands');
 
 process.stdout.write('prompt > ');
 
 process.stdin.on('data', function(data) {
-	var cmd = data.toString().trim();
+  var input = data.toString().trim();
+	var cmd = input.split(" ")[0];
+  if (input.indexOf(" ") > -1) {
+    var args = input.split(" ").slice(1).join(" ");
+  }
 
-  if (cmd === 'date') {
-    var date = new Date();
-    var dateStr = date.toString();
-    process.stdout.write(dateStr);
-  };
-
-  if (cmd === 'pwd') {
-    process.stdout.write(process.cwd());
-  };
-
-	process.stdout.write('\nprompt > ');
+  try {
+    commands[cmd](args);
+  } catch(e) {
+    console.error("ERROR: Invalid Command");
+    commands.prompt();
+  }
 
 });
