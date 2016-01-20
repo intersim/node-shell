@@ -4,7 +4,7 @@ var fs = require('fs');
 var request = require('request');
 
 function done (output, otherCmds) {
-    if (otherCmds.length > 0) {
+    if (otherCmds && otherCmds.length > 0) {
       var nextCmd = otherCmds.shift();
       functions[nextCmd](null, output, otherCmds);
     } else {
