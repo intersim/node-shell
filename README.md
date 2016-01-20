@@ -49,8 +49,8 @@ cat file.txt | head
 
 ##Contribute
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Issue Tracker: https://github.com/intersim/node-shell/issues
+- Source Code: github.com/intersim/node-shell
 
 ##Support
 
