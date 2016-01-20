@@ -12,12 +12,18 @@ process.stdin.on('data', function(data) {
 
   if (input.indexOf('|') > -1) {
     var cmdList = args.split(/\s*\|\s*/g);
-    args = args[0];
-    var otherCmds = args.slice(1);
+    var otherCmds = cmdList.slice(1);
+    args = cmdList[0];
+    // console.log("otherCmds: ", otherCmds, "args: ", args);
   }
 
+  commands.otherCmds = otherCmds;
+
+
+
+
   try {
-    commands[cmd](args);
+    commands[cmd](args, null, otherCmds);
   } catch(e) {
     commands.done("ERROR: Invalid Command");
   }
