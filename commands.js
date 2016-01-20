@@ -14,7 +14,7 @@ function done (output, otherCmds) {
 }
 
 function fileOper (fileName, func, otherCmds) {
-  fs.readFile(fileName, (err, data) => {
+  fs.readFile(fileName, function(err, data) {
     if (err) {
       done("ERROR: Invalid File Name");
     } else {
