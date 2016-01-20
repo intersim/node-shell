@@ -17,6 +17,10 @@ process.stdin.on('data', function(data) {
     // console.log("otherCmds: ", otherCmds, "args: ", args);
   }
 
+  if (args[0] === "$") {
+    args = process.env[args.slice(1)];
+  }
+
   commands.otherCmds = otherCmds;
 
 
