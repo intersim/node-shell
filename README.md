@@ -29,7 +29,7 @@ It has the following features:
   * `cat` - prints a file or stdin
   * `curl` - prints response to HTTP request
   * `date` - prints current date (no formatting arguments provided)
-  * `echo` - prints a string
+  * `echo` - prints a string, or the value of an environment variable (eg. $PATH)
   * `head` - prints first 10 lines of a file or stdin
   * `ls` - lists files in current working directory
   * `pwd` - prints the current working directory
