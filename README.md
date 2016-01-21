@@ -1,6 +1,6 @@
 #node-shell
 
-Workshop exercise completed by @intersim and @paloobi for Grace Hopper Academy.
+Workshop exercise completed by [Emily Intersimone](http://www.github.com/intersim) and [Alexandra Polubiec](http://www.github.com/paloobi) for Grace Hopper Academy.
 
 A Node shell that mimics the basic functionality of a unix-style shell.
 
